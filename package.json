@@ -1,0 +1,15 @@
+{
+  "name": "playerx",
+  "version": "1.0.0",
+  "description": "cron job",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "toasty360",
+  "license": "MIT",
+  "dependencies": {
+    "webcrack": "^2.15.1"
+  }
+}
