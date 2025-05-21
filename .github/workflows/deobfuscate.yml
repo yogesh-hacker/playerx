@@ -31,6 +31,6 @@ jobs:
         run: |
           git config user.name github-actions
           git config user.email github-actions@users.noreply.github.com
-          git add result.js
+          git add key.key
           git commit -m "chore: update deobfuscated JS [auto]" || echo "No changes"
           git push
