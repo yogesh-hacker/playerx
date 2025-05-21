@@ -27,10 +27,13 @@ jobs:
       - name: Run deobfuscator
         run: node index.js
 
-      - name: Commit cleaned code
+      - name: Push changes
+        env:
+          TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           git config user.name github-actions
           git config user.email github-actions@users.noreply.github.com
-          git add key.key
+          git remote set-url origin https://x-access-token:${TOKEN}@github.com/${{ github.repository }}
+          git add result.js
           git commit -m "chore: update deobfuscated JS [auto]" || echo "No changes"
           git push
