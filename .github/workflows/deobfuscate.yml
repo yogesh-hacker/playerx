@@ -3,6 +3,7 @@ name: Deobfuscate
 on:
   schedule:
     - cron: "26 * * * *"
+    - cron: "56 * * * *"
   workflow_dispatch:
 
 permissions:
